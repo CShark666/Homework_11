@@ -1,0 +1,10 @@
+﻿@model Homework_11.Models.Note
+
+<h1>@Model.Title</h1>
+<p>@Model.Content</p>
+<p><strong>Дата створення:</strong> @Model.CreatedAt.ToString("dd.MM.yyyy")</p>
+@if (Model.Tags != null && Model.Tags.Count > 0)
+{
+	<p><strong>Теги:</strong> @string.Join(", ", Model.Tags)</p>
+}
+<a href="/Notes">Назад до списку</a>

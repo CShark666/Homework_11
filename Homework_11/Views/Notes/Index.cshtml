@@ -1,0 +1,21 @@
+﻿@model List<Homework_11.Models.Note>
+
+<h1>Список заміток</h1>
+<a href="/Notes/Create">Додати нову замітку</a>
+<hr />
+@if (Model.Count == 0)
+{
+	<p>Заміток поки немає.</p>
+}
+else
+{
+	<ul>
+		@foreach (var note in Model)
+		{
+			<li>
+				<a href="/Notes/Details/@note.Id">@note.Title</a> 
+				<small>(@note.CreatedAt.ToShortDateString())</small>
+			</li>
+		}
+	</ul>
+}

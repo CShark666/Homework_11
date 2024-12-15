@@ -1,0 +1,19 @@
+﻿@model Homework_11.Models.Note
+
+<h1>Створення нової замітки</h1>
+<form asp-action="Create" method="post">
+	<div>
+		<label for="Title">Назва</label>
+		<input type="text" id="Title" name="Title" required />
+	</div>
+	<div>
+		<label for="Content">Текст</label>
+		<textarea id="Content" name="Content" required></textarea>
+	</div>
+	<div>
+		<label for="Tags">Теги (через кому)</label>
+		<input type="text" id="Tags" name="tags" />
+	</div>
+	<button type="submit">Зберегти</button>
+</form>
+<a href="/Notes">Назад до списку</a>
